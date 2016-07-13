@@ -20,6 +20,7 @@ snippet examples for your day to day workflow. Contributions are welcome!
 - [Generators](#generators)
 - [Async Await](#async-await)
 - [Getter/Setter functions](#getter-and-setter-functions)
+- [Sample Code](#sample-code)
 
 ## var versus let / const
 
@@ -1194,3 +1195,40 @@ person.fullName = 'Bond 007';
 person.fullName; // Bond 007
 ```
 <sup>[(back to table of contents)](#table-of-contents)</sup>
+## Sample Code
+
+1. Prepare ES6 compile environment
+* install babel modules
+```
+npm install --save-dev babel-cli babel-preset-es2015
+```
+
+* create .babelrc config
+```
+{
+  "presets": ["es2015"]
+}
+```
+
+* update package.json as below
+```
+"scripts": {
+  "build": "babel src -d build"
+},
+"dependencies": {
+  "babel-cli": "~6.10.1",
+  "babel-preset-es2015": "~6.9.0"
+}
+```
+
+2. Build first and run with node
+```
+npm run build
+node build/sample.js
+
+```
+
+3. Run with babel-node directly
+```
+./node_modules/.bin/babel-node src/sample.js
+```
