@@ -1197,20 +1197,20 @@ person.fullName; // Bond 007
 <sup>[(back to table of contents)](#table-of-contents)</sup>
 ## Sample Code
 
-1. Prepare ES6 compile environment
-* install babel modules
+### Prepare ES6 compile environment
+install babel modules
 ```
 npm install --save-dev babel-cli babel-preset-es2015
 ```
 
-* create .babelrc config
+create .babelrc config
 ```
 {
   "presets": ["es2015"]
 }
 ```
 
-* update package.json as below
+update package.json as below
 ```
 "scripts": {
   "build": "babel src -d build"
@@ -1221,14 +1221,14 @@ npm install --save-dev babel-cli babel-preset-es2015
 }
 ```
 
-2. Build first and run with node
+### Build first and run with node
 ```
 npm run build
 node build/sample.js
 
 ```
 
-3. Run with babel-node directly
+### Run with babel-node directly
 ```
 ./node_modules/.bin/babel-node src/sample.js
 ```
